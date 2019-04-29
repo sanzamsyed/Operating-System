@@ -3,7 +3,7 @@
 Author : Syed Sanzam
 Course No. : 3124
 Course Title: Operating System Lab
-Session: 07 Deadlock management with Resource Allocation Graph
+Session: 07 Deadlock with Resource Allocation Graph
 
 
 */
@@ -121,11 +121,5 @@ int main()
 {
     Create();
     Dfs();
-
-
-
-
-
-
 
 }
