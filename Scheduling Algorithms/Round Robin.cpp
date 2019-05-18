@@ -98,17 +98,17 @@ int main()
 
     }
 
-    float res = 0;
+    float totalWaiting = 0;
     for(int i = 0; i < n; i++)
     {
 
         result[i].turnaround = result[i].completion - result[i].arr;
 
         result[i].waiting = result[i].turnaround - result[i].originalburst;
-        res = res + result[i].waiting;
+        totalWaiting = totalWaiting + result[i].waiting;
     }
 
-    cout << "Average Waiting Time is : " << (float)res/n << endl;
+    cout << "Average Waiting Time is : " << (float)totalWaiting/n << endl;
 
 
 
