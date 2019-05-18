@@ -46,12 +46,6 @@ int main()
 
     }
 
-    cout << "Check" << endl;
-
-    for(int i = 0; i < n; i++)
-    {
-        cout << "Burst" << p[i].burst << endl;
-    }
 
 
     sort(p.begin(),p.end(),ATSort);
@@ -114,7 +108,7 @@ int main()
         res = res + result[i].waiting;
     }
 
-    cout << "Result is " << res/n << endl;
+    cout << "Average Waiting Time is : " << (float)res/n << endl;
 
 
 
