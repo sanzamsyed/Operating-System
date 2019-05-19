@@ -1,11 +1,8 @@
 /*
-
 Author : Syed Sanzam
 Course No. : 3124
 Course Title: Operating System Lab
 Session: 13 Simulating Banker's Algorithm
-
-
 */
 
 #include <bits/stdc++.h>
@@ -65,13 +62,27 @@ void Init()
     }
 }
 
-void print()
+void Print()
 {
+    cout <<"Max Table:" << endl;
     for(int i = 0; i < proc; i++)
     {
         for(int j = 0; j < res; j++)
         {
             cout << maxTab[i][j] << "\t";
+        }
+
+        cout << endl;
+    }
+
+    cout << endl;
+
+    cout <<"Need Matrix:" << endl;
+    for(int i = 0; i < proc; i++)
+    {
+        for(int j = 0; j < res; j++)
+        {
+            cout << maxTab[i][j]-allocatedTab[i][j] << "\t";
         }
 
         cout << endl;
@@ -149,27 +160,23 @@ void Bankers()
 
 int main()
 {
-    freopen("BankersInput.txt","r",stdin);
+    //freopen("BankersInput.txt","r",stdin);
     Init();
+    Print();
     Bankers();
 
 
 }
 
 /*
-
 4 3
-
 9 3 6
-
 3 2 2
 6 1 3
 3 1 4
 4 2 2
-
 1 0 0
 5 1 1
 2 1 1
 0 0 2
-
 */
